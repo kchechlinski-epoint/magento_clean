@@ -1,41 +1,82 @@
-# Magento 2
-/app/etc/env.php
-/app/etc/config.php
-/var/
-/generated/
-/pub/static/
-/pub/media/
-/vendor/
-/node_modules/
-/.idea/
-/.vscode/
-/.DS_Store
-*.log
-*.zip
-*.tar.gz
-*.gz
-*.tgz
+# Ignoruj wszystko domyślnie
+*
+
+# Ale nie ignoruj tych katalogów i plików:
+!.gitignore
+!composer.json
+!composer.lock
+!auth.json.sample
+!nginx.conf.sample
+!package.json.sample
+
+# Katalog app - tylko wybrane podkatalogi
+!app/
+app/*
+!app/code/
+!app/design/
+!app/etc/
+app/etc/*
+!app/etc/config.php
+!app/etc/env.php.sample
+!app/etc/di.xml
+!app/etc/registration_globlist.php
+
+# Konfiguracja Warden
+!.warden/
+!warden-env.yml
+
+# Dokumentacja
+!README.md
+!*.md
+
+# Pliki konfiguracyjne
+!*.sample
+!*.dist
+!*.example
+
+# Nie ignoruj plików .htaccess w głównych katalogach
+!.htaccess
+!pub/.htaccess
+!pub/.user.ini
+
+# Podstawowe pliki pub
+!pub/
+pub/*
+!pub/.htaccess
+!pub/.user.ini
+!pub/index.php
+!pub/static.php
+!pub/get.php
+!pub/health_check.php
+!pub/cron.php
+
+# Pliki błędów
+!pub/errors/
+pub/errors/local.xml
+
+# Katalogi które mogą być potrzebne
+!bin/
+!dev/
+dev/tests/
+dev/tools/
+
+# Ignoruj wszystkie logi i cache
+var/
+generated/
+pub/static/
+pub/media/
+
+# Vendor i node_modules
+vendor/
+node_modules/
+
+# IDE
+.idea/
+.vscode/
 *.swp
 *.swo
-*.bak
-*.tmp
-*.cache
-/.warden/db/
-/.warden/*.sql
-/.warden/*.zip
-/.env
-/.php-cs-fixer.cache
-/.composer/
-/.user.ini
-/.htaccess
-/.htaccess.sample
-# Warden
-.warden/
-# System
-Thumbs.db
-ehthumbs.db
-Icon?
+*~
+
+# OS
 .DS_Store
-._*
-.Spotlight-V100
-.Trashes
+Thumbs.db
