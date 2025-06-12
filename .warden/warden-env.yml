@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  php-fpm:
+    build:
+      context: ./.warden/php-fpm
+  php-debug:
+    build:
+      context: ./.warden/php-debug
+  varnish:
+    labels:
+      - traefik.http.routers.${WARDEN_ENV_NAME}-varnish.rule=
+        HostRegexp(`{subdomain:.+}.${TRAEFIK_DOMAIN}`)
+        || Host(`${TRAEFIK_DOMAIN}`)
+        || HostRegexp(`{subdomain:.+}.magento.test`)
+        || Host(`magento.test`)
+        || HostRegexp(`{subdomain:.+}.alternate2.test`)
+        || Host(`alternate2.test`)
+  nginx:
+    labels:
+      - traefik.http.routers.${WARDEN_ENV_NAME}-nginx.rule=
+        HostRegexp(`{subdomain:.+}.${TRAEFIK_DOMAIN}`)
+        || Host(`${TRAEFIK_DOMAIN}`)
+        || HostRegexp(`{subdomain:.+}.magento.test`)
+        || Host(`magento.test`)
+        || HostRegexp(`{subdomain:.+}.alternate2.test`)
+        || Host(`alternate2.test`) 
