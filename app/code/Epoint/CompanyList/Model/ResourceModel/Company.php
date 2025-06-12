@@ -11,6 +11,17 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class Company extends AbstractDb
 {
+    protected $companyModel;
+
+    public function __construct(
+        \Magento\Framework\Model\ResourceModel\Db\Context $context,
+        \Epoint\CompanyList\Model\Company $companyModel,
+        $connectionName = null
+    ) {
+        $this->companyModel = $companyModel;
+        parent::__construct($context, $connectionName);
+    }
+
     /**
      * Initialize resource model
      *
