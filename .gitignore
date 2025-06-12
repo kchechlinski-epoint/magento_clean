@@ -21,6 +21,9 @@ app/etc/*
 !app/etc/di.xml
 !app/etc/registration_globlist.php
 
+# Nasze moduły
+!app/code/Epoint/
+
 # Konfiguracja Warden
 !.warden/
 !warden-env.yml
