@@ -32,7 +32,7 @@
             <updateUrl path="mui/index/render"/>
         </settings>
         <aclResource>Epoint_CompanyList::companies</aclResource>
-        <dataProvider class="Epoint\CompanyList\Model\ResourceModel\Company\Grid\Collection" name="epoint_company_listing_data_source">
+        <dataProvider class="Epoint\CompanyList\Ui\DataProvider\CompanyDataProvider" name="epoint_company_listing_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
                 <primaryFieldName>entity_id</primaryFieldName>
