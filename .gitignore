@@ -3,6 +3,7 @@
 
 # Ale nie ignoruj tych katalogów i plików:
 !.gitignore
+!index.php
 !composer.json
 !composer.lock
 !auth.json.sample
