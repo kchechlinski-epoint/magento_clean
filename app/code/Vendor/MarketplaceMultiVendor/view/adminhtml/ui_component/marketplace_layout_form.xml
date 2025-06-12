@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/ui_configuration.xsd">
+    <fieldset name="general">
+        <field name="layout_template" sortOrder="10" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Layout Template</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="dataScope" xsi:type="string">layout_template</item>
+                </item>
+            </argument>
+            <settings>
+                <options class="Vendor\\MarketplaceMultiVendor\\Model\\Config\\Source\\Layout"/>
+            </settings>
+        </field>
+    </fieldset>
+</form>
