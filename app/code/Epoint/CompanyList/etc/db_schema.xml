@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Epoint All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="epoint_company" resource="default" engine="innodb" comment="Epoint Company Table">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Company Name"/>
+        <column xsi:type="varchar" name="email" nullable="true" length="255" comment="Company Email"/>
+        <column xsi:type="varchar" name="phone" nullable="true" length="50" comment="Company Phone"/>
+        <column xsi:type="varchar" name="website" nullable="true" length="255" comment="Company Website"/>
+        <column xsi:type="text" name="address" nullable="true" comment="Company Address"/>
+        <column xsi:type="varchar" name="city" nullable="true" length="100" comment="Company City"/>
+        <column xsi:type="varchar" name="country" nullable="true" length="100" comment="Company Country"/>
+        <column xsi:type="varchar" name="postal_code" nullable="true" length="20" comment="Company Postal Code"/>
+        <column xsi:type="smallint" name="status" unsigned="true" nullable="false" identity="false" default="1" comment="Company Status"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        
+        <index referenceId="EPOINT_COMPANY_NAME" indexType="btree">
+            <column name="name"/>
+        </index>
+        
+        <index referenceId="EPOINT_COMPANY_EMAIL" indexType="btree">
+            <column name="email"/>
+        </index>
+        
+        <index referenceId="EPOINT_COMPANY_STATUS" indexType="btree">
+            <column name="status"/>
+        </index>
+        
+        <index referenceId="EPOINT_COMPANY_CREATED_AT" indexType="btree">
+            <column name="created_at"/>
+        </index>
+    </table>
+</schema> 

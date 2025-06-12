@@ -23,6 +23,7 @@ app/etc/*
 
 # Nasze moduły
 !app/code/Epoint/
+!app/code/Epoint/**
 
 # Konfiguracja Warden
 !.warden/
