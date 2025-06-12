@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<acl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <resources>
+        <resource id="Magento_Backend::admin">
+            <resource id="Vendor_MarketplaceMultiVendor::marketplace" title="Marketplace" sortOrder="50">
+                <resource id="Vendor_MarketplaceMultiVendor::vendors" title="Vendors"/>
+                <resource id="Vendor_MarketplaceMultiVendor::products" title="Product Approvals"/>
+                <resource id="Vendor_MarketplaceMultiVendor::reports" title="Reports"/>
+                <resource id="Vendor_MarketplaceMultiVendor::config" title="Configuration"/>
+            </resource>
+        </resource>
+    </resources>
+</acl>

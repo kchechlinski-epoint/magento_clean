@@ -25,6 +25,8 @@ app/etc/*
 # Nasze moduły
 !app/code/Epoint/
 !app/code/Epoint/**
+!app/code/Vendor/
+!app/code/Vendor/**
 
 # Konfiguracja Warden
 !.warden/

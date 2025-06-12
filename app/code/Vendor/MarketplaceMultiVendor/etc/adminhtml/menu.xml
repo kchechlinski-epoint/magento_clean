@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <add id="Vendor_MarketplaceMultiVendor::marketplace_root" title="Marketplace" module="Vendor_MarketplaceMultiVendor" sortOrder="50" parent="Magento_Backend::content" resource="Vendor_MarketplaceMultiVendor::marketplace"/>
+    <add id="Vendor_MarketplaceMultiVendor::dashboard" title="Dashboard" module="Vendor_MarketplaceMultiVendor" sortOrder="10" parent="Vendor_MarketplaceMultiVendor::marketplace_root" resource="Vendor_MarketplaceMultiVendor::marketplace"/>
+    <add id="Vendor_MarketplaceMultiVendor::vendors" title="Vendors" module="Vendor_MarketplaceMultiVendor" sortOrder="20" parent="Vendor_MarketplaceMultiVendor::marketplace_root" resource="Vendor_MarketplaceMultiVendor::vendors"/>
+    <add id="Vendor_MarketplaceMultiVendor::products" title="Product Approvals" module="Vendor_MarketplaceMultiVendor" sortOrder="30" parent="Vendor_MarketplaceMultiVendor::marketplace_root" resource="Vendor_MarketplaceMultiVendor::products"/>
+    <add id="Vendor_MarketplaceMultiVendor::reports" title="Reports" module="Vendor_MarketplaceMultiVendor" sortOrder="40" parent="Vendor_MarketplaceMultiVendor::marketplace_root" resource="Vendor_MarketplaceMultiVendor::reports"/>
+</menu>
